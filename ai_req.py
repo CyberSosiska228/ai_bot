@@ -2,7 +2,7 @@ import requests
 
 
 def send_req(send_param):
-    r = requests.get(send_param.url, headers=send_param.headers)
+    r = requests.get(send_param["url", headers=send_param["headers"])
 
 
 send = {
