@@ -9,7 +9,8 @@ def send_req(send_param):
 
 send = {
         "url" : "http://localhost:11434/api/generate",
-        "headers" : {
+        "headers" : {"Content-Type" : "applicatioin/json"},
+        "json" : {
             "model": "llama3.2",
             "prompt": "Why is the sky blue?"
         }
