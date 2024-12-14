@@ -10,7 +10,7 @@ send = {
         "url" : "http://localhost:11434/api/generate",
         "headers" : {"Content-Type" : "applicatioin/json"},
         "json" : {
-            "model": "llama3.2",
+            "model": "llama3.2:3b",
             "prompt": "Why is the sky blue?"
         }
 }
