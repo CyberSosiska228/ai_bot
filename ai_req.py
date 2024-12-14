@@ -2,7 +2,7 @@ import requests
 
 
 def send_req(send_param):
-    r = requests.get(send_param["url"], headers=send_param["headers"], json=send_param["json"])
+    r = requests.post(send_param["url"], headers=send_param["headers"], json=send_param["json"])
     return r
 
 
