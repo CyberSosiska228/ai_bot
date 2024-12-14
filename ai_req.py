@@ -4,6 +4,8 @@ import requests
 def send_req(send_param):
     r = requests.get(send_param["url"], headers=send_param["headers"])
 
+    return r
+
 
 send = {
         "url" : "http://localhost:11434/api/generate",
@@ -13,4 +15,4 @@ send = {
         }
 }
 
-send_req(send)
+print(send_req(send).content)
