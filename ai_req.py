@@ -15,4 +15,4 @@ send = {
         }
 }
 
-print(str(send_req(send).content))
+print(send_req(send).content.decode("ascii"))
