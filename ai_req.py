@@ -15,4 +15,4 @@ send = {
         }
 }
 
-print(send_req(send).content)
+print(str(send_req(send).content))
