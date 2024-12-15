@@ -8,21 +8,23 @@ def send_req(send_param):
 
 def resp_to_str(resp):
     res = ""
-    lst = resp.split("\n")
+    lst = resp.split(b"\n")
 
     err = True
     for i in lst:
-        ans_part = json.loads(i)
+        ans_part = json.loads(i.decode("ascii"))
         res += ans_part["response"]
-        if (ans_part["done"] and ans_part["done_reason"] == "stop"):
-            err = False
+        if (ans_part["done"]):
+            if (ans_part["done_reason"] == "stop"):
+                err = False
+            break
 
     if (err):
         return "Sorry, error occured("
     return res
 
 def ans_quest(send):
-    r = send_req(send).content.decode("ascii")
+    r = send_req(send).content
     ans = resp_to_str(r)
     return ans
 
