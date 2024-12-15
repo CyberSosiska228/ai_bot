@@ -11,7 +11,7 @@ send = {
         "headers" : {"Content-Type" : "applicatioin/json"},
         "json" : {
             "model": "llama3.2:3b",
-            "prompt": "Why is the sky blue?"
+            "prompt": "Hi"
         }
 }
 
